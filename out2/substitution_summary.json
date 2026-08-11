@@ -1,0 +1,22 @@
+{
+  "t0": "2024-09-01T00:00",
+  "t1": "2026-08-01T00:00",
+  "routed_asns_t0": 1661,
+  "routed_asns_t1": 1584,
+  "asns_departed": 181,
+  "asns_new": 104,
+  "prefixes_checked": 509,
+  "outcomes": {
+    "DARK": 209,
+    "ABSORBED": 163,
+    "RETURNED": 137
+  },
+  "ipv4_addresses_by_outcome": {
+    "ABSORBED": 54274,
+    "DARK": 104192,
+    "RETURNED": 115200
+  },
+  "absorbed_share_of_resolved_prefixes": 0.4382,
+  "distinct_acquirers": 97,
+  "top5_acquirer_share_of_absorbed_addresses": 0.2972
+}

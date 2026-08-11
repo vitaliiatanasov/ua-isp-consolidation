@@ -1,0 +1,245 @@
+[1/3] routed ASN sets at 2024-09-01T00:00 and 2026-08-01T00:00 ...
+  T0=1661  T1=1584  departed=181  new=104
+[2/3] recovering prefixes for 181 departed ASNs ...
+  [1/181] AS5593: 1 prefixes
+  [2/181] AS6886: 5 prefixes
+  [3/181] AS8274: 3 prefixes
+  [4/181] AS8343: 13 prefixes
+  [5/181] AS8647: 5 prefixes
+  [6/181] AS9213: 2 prefixes
+  [7/181] AS15458: 2 prefixes
+  [8/181] AS15821: 1 prefixes
+  [9/181] AS20790: 1 prefixes
+  [10/181] AS20979: 1 prefixes
+  [11/181] AS21390: 2 prefixes
+  [12/181] AS24610: 5 prefixes
+  [13/181] AS24630: 1 prefixes
+  [14/181] AS24685: 22 prefixes
+  [15/181] AS24881: 3 prefixes
+  [16/181] AS25000: 6 prefixes
+  [17/181] AS29107: 26 prefixes
+  [18/181] AS29187: 1 prefixes
+  [19/181] AS29421: 1 prefixes
+  [20/181] AS29559: 1 prefixes
+  [21/181] AS29597: 1 prefixes
+  [22/181] AS31044: 1 prefixes
+  [23/181] AS31447: 1 prefixes
+  [24/181] AS31489: 1 prefixes
+  [25/181] AS34068: 1 prefixes
+  [26/181] AS34180: 3 prefixes
+  [27/181] AS34331: 1 prefixes
+  [28/181] AS35523: 1 prefixes
+  [29/181] AS35781: 1 prefixes
+  [30/181] AS38931: 1 prefixes
+  [31/181] AS39071: 1 prefixes
+  [32/181] AS39262: 1 prefixes
+  [33/181] AS39329: 1 prefixes
+  [34/181] AS39331: 1 prefixes
+  [35/181] AS41081: 3 prefixes
+  [36/181] AS41166: 1 prefixes
+  [37/181] AS41172: 1 prefixes
+  [38/181] AS41350: 1 prefixes
+  [39/181] AS41422: 1 prefixes
+  [40/181] AS41540: 4 prefixes
+  [41/181] AS41665: 7 prefixes
+  [42/181] AS41737: 4 prefixes
+  [43/181] AS41791: 1 prefixes
+  [44/181] AS42051: 1 prefixes
+  [45/181] AS42054: 1 prefixes
+  [46/181] AS42088: 1 prefixes
+  [47/181] AS42192: 1 prefixes
+  [48/181] AS42250: 1 prefixes
+  [49/181] AS42379: 2 prefixes
+  [50/181] AS42533: 1 prefixes
+  [51/181] AS42702: 5 prefixes
+  [52/181] AS43162: 1 prefixes
+  [53/181] AS43613: 1 prefixes
+  [54/181] AS43748: 4 prefixes
+  [55/181] AS43864: 2 prefixes
+  [56/181] AS43875: 1 prefixes
+  [57/181] AS44005: 1 prefixes
+  [58/181] AS44010: 2 prefixes
+  [59/181] AS44117: 2 prefixes
+  [60/181] AS44333: 1 prefixes
+  [61/181] AS44350: 1 prefixes
+  [62/181] AS44379: 1 prefixes
+  [63/181] AS44456: 1 prefixes
+  [64/181] AS44686: 3 prefixes
+  [65/181] AS44750: 2 prefixes
+  [66/181] AS44801: 1 prefixes
+  [67/181] AS45043: 6 prefixes
+  [68/181] AS47463: 1 prefixes
+  [69/181] AS47550: 3 prefixes
+  [70/181] AS47821: 1 prefixes
+  [71/181] AS48006: 1 prefixes
+  [72/181] AS48243: 5 prefixes
+  [73/181] AS48245: 1 prefixes
+  [74/181] AS48471: 1 prefixes
+  [75/181] AS48589: 1 prefixes
+  [76/181] AS48752: 6 prefixes
+  [77/181] AS48845: 2 prefixes
+  [78/181] AS48880: 0 prefixes
+  [79/181] AS48882: 17 prefixes
+  [80/181] AS49224: 1 prefixes
+  [81/181] AS49444: 12 prefixes
+  [82/181] AS49465: 3 prefixes
+  [83/181] AS49570: 1 prefixes
+  [84/181] AS49748: 1 prefixes
+  [85/181] AS50027: 1 prefixes
+  [86/181] AS50569: 1 prefixes
+  [87/181] AS50643: 3 prefixes
+  [88/181] AS50649: 2 prefixes
+  [89/181] AS50927: 2 prefixes
+  [90/181] AS50956: 1 prefixes
+  [91/181] AS50981: 5 prefixes
+  [92/181] AS51250: 1 prefixes
+  [93/181] AS52131: 2 prefixes
+  [94/181] AS52190: 1 prefixes
+  [95/181] AS56428: 3 prefixes
+  [96/181] AS56446: 1 prefixes
+  [97/181] AS56558: 1 prefixes
+  [98/181] AS56766: 3 prefixes
+  [99/181] AS57033: 15 prefixes
+  [100/181] AS57462: 1 prefixes
+  [101/181] AS57605: 1 prefixes
+  [102/181] AS57616: 1 prefixes
+  [103/181] AS57659: 1 prefixes
+  [104/181] AS57804: 1 prefixes
+  [105/181] AS57960: 4 prefixes
+  [106/181] AS58164: 1 prefixes
+  [107/181] AS59593: 1 prefixes
+  [108/181] AS59613: 13 prefixes
+  [109/181] AS60839: 4 prefixes
+  [110/181] AS60928: 1 prefixes
+  [111/181] AS61101: 1 prefixes
+  [112/181] AS61344: 4 prefixes
+  [113/181] AS61432: 1 prefixes
+  [114/181] AS61965: 1 prefixes
+  [115/181] AS62117: 2 prefixes
+  [116/181] AS62181: 2 prefixes
+  [117/181] AS62360: 1 prefixes
+  [118/181] AS64406: 1 prefixes
+  [119/181] AS64455: 1 prefixes
+  [120/181] AS64490: 2 prefixes
+  [121/181] AS196682: 6 prefixes
+  [122/181] AS196851: 2 prefixes
+  [123/181] AS196860: 1 prefixes
+  [124/181] AS196864: 4 prefixes
+  [125/181] AS196877: 1 prefixes
+  [126/181] AS197002: 2 prefixes
+  [127/181] AS197488: 1 prefixes
+  [128/181] AS197710: 0 prefixes
+  [129/181] AS197751: 1 prefixes
+  [130/181] AS198085: 1 prefixes
+  [131/181] AS198215: 1 prefixes
+  [132/181] AS198665: 1 prefixes
+  [133/181] AS199450: 1 prefixes
+  [134/181] AS199986: 1 prefixes
+  [135/181] AS202197: 1 prefixes
+  [136/181] AS202198: 1 prefixes
+  [137/181] AS202244: 1 prefixes
+  [138/181] AS202398: 1 prefixes
+  [139/181] AS202497: 7 prefixes
+  [140/181] AS202969: 1 prefixes
+  [141/181] AS203727: 2 prefixes
+  [142/181] AS203781: 1 prefixes
+  [143/181] AS204485: 1 prefixes
+  [144/181] AS204549: 1 prefixes
+  [145/181] AS204743: 2 prefixes
+  [146/181] AS205013: 1 prefixes
+  [147/181] AS205145: 1 prefixes
+  [148/181] AS205255: 1 prefixes
+  [149/181] AS205266: 1 prefixes
+  [150/181] AS205268: 2 prefixes
+  [151/181] AS205364: 1 prefixes
+  [152/181] AS205513: 2 prefixes
+  [153/181] AS205692: 3 prefixes
+  [154/181] AS206112: 1 prefixes
+  [155/181] AS206326: 1 prefixes
+  [156/181] AS206777: 1 prefixes
+  [157/181] AS207957: 13 prefixes
+  [158/181] AS208334: 1 prefixes
+  [159/181] AS208476: 7 prefixes
+  [160/181] AS208515: 1 prefixes
+  [161/181] AS208557: 2 prefixes
+  [162/181] AS208652: 1 prefixes
+  [163/181] AS208841: 3 prefixes
+  [164/181] AS209121: 1 prefixes
+  [165/181] AS209742: 1 prefixes
+  [166/181] AS209845: 2 prefixes
+  [167/181] AS209952: 1 prefixes
+  [168/181] AS210546: 4 prefixes
+  [169/181] AS210950: 1 prefixes
+  [170/181] AS211199: 9 prefixes
+  [171/181] AS211741: 1 prefixes
+  [172/181] AS212392: 1 prefixes
+  [173/181] AS212913: 10 prefixes
+  [174/181] AS212956: 1 prefixes
+  [175/181] AS213375: 1 prefixes
+  [176/181] AS214417: 3 prefixes
+  [177/181] AS215232: 19 prefixes
+  [178/181] AS215789: 3 prefixes
+  [179/181] AS216093: 8 prefixes
+  [180/181] AS216271: 29 prefixes
+  [181/181] AS216288: 1 prefixes
+[3/3] checking current origin of 509 prefixes ...
+  25/509
+  50/509
+  75/509
+  100/509
+  125/509
+  150/509
+  175/509
+  200/509
+  225/509
+  250/509
+  275/509
+  300/509
+  325/509
+  350/509
+  375/509
+  400/509
+  425/509
+  450/509
+  475/509
+  500/509
+{
+  "t0": "2024-09-01T00:00",
+  "t1": "2026-08-01T00:00",
+  "routed_asns_t0": 1661,
+  "routed_asns_t1": 1584,
+  "asns_departed": 181,
+  "asns_new": 104,
+  "prefixes_checked": 509,
+  "outcomes": {
+    "DARK": 209,
+    "ABSORBED": 163,
+    "RETURNED": 137
+  },
+  "ipv4_addresses_by_outcome": {
+    "ABSORBED": 54274,
+    "DARK": 104192,
+    "RETURNED": 115200
+  },
+  "absorbed_share_of_resolved_prefixes": 0.4382,
+  "distinct_acquirers": 97,
+  "top5_acquirer_share_of_absorbed_addresses": 0.2972
+}
+
+Top acquirers:
+ new_origin_asn                           new_origin_holder  prefixes  addresses  sellers
+        64410.0               BELICOMNET-AS BELICOM.NET LLC         2       6144        1
+        25082.0          AS-VINER-TELECOM Viner Telecom LLC         6       3072        1
+       204552.0             POPILNYANET-AS POPILNYA.NET LLC         2       2560        1
+       203020.0  HostRoyale HostRoyale Technologies Pvt Ltd         5       2304        5
+       213996.0                       J-AND-Y-ASN "J&Y" LLC         3       2048        1
+        61159.0 GIGANET-CDN Ukrainian Backbone Networks LLC         7       1792        1
+       202502.0                      Eurolir-AS LLC "ATOM3"         5       1280        1
+       203273.0                NetCraftersOU NetCrafters OU         3       1280        3
+       213890.0              novoros-as NOVOROS-TELECOM LLC         5       1280        1
+        34661.0               BREEZE-NETWORK TOV TRK "Briz"         1       1024        1
+        48323.0         NEIRONSYSTEMS-NET PP Neiron Systems         1       1024        1
+        58309.0                      LANGATE-AS Langate Ltd         1       1024        1
+        59671.0          BIT-AS TzOV "Biznes i Technologii"         4       1024        1
+        50581.0   UTG Ukrainian Telecommunication Group LLC         3        768        1
+       213694.0                          INLAN-AS INLAN LLC         2        768        1

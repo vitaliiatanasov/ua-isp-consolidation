@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+title: >-
+  Market consolidation and network redundancy in Ukraine's
+  fixed-line ISP sector, 2021-2026
+message: >-
+  If you use this dataset or code, please cite it using the
+  metadata below.
+type: dataset
+authors:
+  - family-names: Atanasov
+    given-names: Vitalii
+    city: Kyiv
+    country: UA
+abstract: >-
+  Routing-data analysis of Ukraine's fixed-line internet
+  provider market before and after the October 2024
+  withdrawal of the simplified tax regime for small
+  providers. Combines RIPEstat autonomous-system series,
+  PeeringDB network classification, and prefix-level
+  substitution analysis to measure how much of the market
+  is observable in routing data at all. Separates market
+  consolidation from the appropriation of networks in
+  occupied territory.
+keywords:
+  - internet infrastructure
+  - network resilience
+  - BGP
+  - Ukraine
+  - telecommunications regulation
+  - market consolidation
+license: MIT
+date-released: '2026-08'
