@@ -8,7 +8,7 @@
   "asns_new": 104,
   "prefixes_checked_ipv4": 416,
   "prefixes_dropped_ipv6": 93,
-  "returned_note": "RETURNED is excluded from the finding by construction: the same origin AS reappeared, which is observation noise at T0/T1 rather than an exit.",
+  "returned_note": "RETURNED excluded from the finding by construction -- the same origin AS reappeared, i.e. observation noise at T0/T1, not an exit.",
   "outcomes_prefix_count": {
     "DARK": 134,
     "ABSORBED_market": 129,
@@ -46,5 +46,5 @@
   "market_absorbed_prefixes_geolocating_outside_ua": 50,
   "market_absorbed_addresses_geolocating_outside_ua": 14080,
   "ipv6_note": "IPv4 only. prefix_substitution_ua.py assigns addresses = 0 to every IPv6 prefix by construction and sums addresses over IPv4 alone, so address-weighted figures were already IPv4-only; the 93 IPv6 rows are dropped here so the row population matches. Prefix counts are not comparable across families: IPv6 blocks in this set run /29 to /48 against /17 to /32 for IPv4. None of the 11 absorbed IPv6 prefixes geolocates to RU, so the exclusion does not move the occupation split.",
-  "method_note": "Country is determined by RIPEstat geolocation of the announced prefix itself, not by the acquiring AS holder's registered country: an AS registered elsewhere can still announce a UA-based network. Prefixes geolocating to RU are excluded from the consolidation finding as appropriation of networks in occupied territory. Prefixes geolocating to third countries are retained in the market set; see README on why this asymmetry is a limitation rather than a decision."
+  "method_note": "Country is determined by RIPEstat geolocation of the announced prefix itself, not by the acquiring AS holder's registered country: an AS registered elsewhere can still announce a UA-based network. Prefixes geolocating to RU are excluded from the consolidation finding as appropriation of networks in occupied territory. Prefixes geolocating to third countries are retained in the market set; see README on the asymmetry."
 }

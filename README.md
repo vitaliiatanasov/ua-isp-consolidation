@@ -66,8 +66,8 @@ data/PROVENANCE.md                  query dates, sources, why re-running gives d
 |---|---|
 | `departed_asns.csv` | The 181 ASes announcing at T0 but not at T1 |
 | `prefix_outcomes.csv` | One row per prefix (509: 416 IPv4, 93 IPv6), with outcome and new origin. Occupation not yet separated. |
-| `absorbed_prefix_geo.csv` | Archived RIPEstat geolocation of all 163 absorbed prefixes, retrieved 2026-08. An **input** to the adjustment, not a derived output. |
-| `acquirer_countries.csv` | Archived country attribution per acquiring AS, retrieved 2026-08. An **input**, not a derived output. |
+| `absorbed_prefix_geo.csv` | Archived RIPEstat geolocation of all 163 absorbed prefixes, retrieved 2026-08. Input to the adjustment below. |
+| `acquirer_countries.csv` | Archived country attribution per acquiring AS, retrieved 2026-08. Input to the adjustment below. |
 | `prefix_outcomes_geo_adjusted.csv` | IPv4 only (416 rows), each prefix geolocated, RU-announced space split out in `outcome_adj`. Produced by `geo_adjust_ua.py`. |
 | `acquirers_ru_filtered.csv` | Market acquirers, 82 rows. Produced by `geo_adjust_ua.py`. **Cited in the proposal.** |
 | `ru_occupation_acquirers.csv` | The 17 Russian holders announcing appropriated UA space. Produced by `geo_adjust_ua.py`. |
@@ -82,8 +82,8 @@ Dependency order:
 prefix_outcomes.csv + absorbed_prefix_geo.csv  ->  geo_adjust_ua.py  ->  *_geo_adjusted, acquirers_*, *_ru_adjusted
 ```
 
-No file cited in the proposal sits in this tree without either a script that
-produces it or a note marking it an archived external lookup with a retrieval date.
+Every file cited in the proposal is either produced by a script above or marked
+in the table as an archived lookup with a retrieval date.
 
 ## Method, in three steps
 
@@ -116,8 +116,7 @@ reported because a partially-returned AS is equally a false exit. The denominato
 is the 181 departed ASes; prefixes were recovered for 179 of them, and against
 that denominator the rate is 13.4%.
 
-**Every published figure is IPv4-only, and the restriction is inherited rather
-than introduced.** `prefix_outcomes.csv` holds 509 rows: 416 IPv4 and 93 IPv6.
+**Every published figure is IPv4-only.** `prefix_outcomes.csv` holds 509 rows: 416 IPv4 and 93 IPv6.
 The adjusted files hold 416. `prefix_substitution_ua.py` assigns `addresses = 0`
 to every IPv6 prefix by construction and sums addresses over IPv4 alone, so
 address-weighted figures were already IPv4-only before any adjustment; dropping
@@ -144,8 +143,7 @@ Ukrainian network. Two holders (INLAN, Perspektiva-TV) appear in **both** lists:
 some of their prefixes geolocate to UA and some to RU. That is the classification
 working as intended, not a duplicate.
 
-**The geolocation criterion is applied asymmetrically, and this is a limitation
-rather than a decision.** 23 absorbed prefixes geolocate to RU and are excluded
+**The geolocation criterion is applied asymmetrically.** 23 absorbed prefixes geolocate to RU and are excluded
 as appropriation. 50 more geolocate to Germany, the United States, France, the
 Czech Republic, Iran, Kyrgyzstan and elsewhere, and are retained in the
 market-consolidation figure — 50 of 129 prefixes, 14,080 of 48,384 addresses,
@@ -153,8 +151,7 @@ market-consolidation figure — 50 of 129 prefixes, 14,080 of 48,384 addresses,
 sits, in which case those 50 need an account and the consolidation figure is an
 overstatement; or it is noisy for small blocks and reflects the acquirer's
 infrastructure, in which case the RU exclusion rests on something other than
-geolocation. This is not settled here. The counts are published so a reader can
-settle it differently.
+geolocation. Which reading holds is not settled here; both counts are above.
 
 **Superseded files still in the tree, and why.**
 `out2/substitution_summary.json` is the raw script output, with occupation not yet
@@ -186,8 +183,8 @@ above.** BGP is a live system: prefixes move, ASes return, PeeringDB records
 change. The archived outputs in `out/` and `out2/` are the analysis; the scripts
 are how it was produced. See `data/PROVENANCE.md` for query dates.
 
-`scripts/geo_adjust_ua.py` is different: it makes no network calls and transforms
-archived files only, so it reproduces its outputs exactly, today and later.
+`scripts/geo_adjust_ua.py` makes no network calls and transforms archived files
+only, so it reproduces its outputs exactly.
 
 ## License
 

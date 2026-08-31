@@ -25,8 +25,8 @@ against /17 to /32 for IPv4. The exclusion cannot move the occupation split,
 since none of the 11 absorbed IPv6 prefixes geolocates to RU.
 
 RU-announced space split out. A prefix whose announced block geolocates to RU
-is appropriation of a network in occupied territory rather than a market
-transaction, and is excluded from the consolidation figures. Country comes
+is excluded from the consolidation figures as appropriation of a network in
+occupied territory. Country comes
 from the prefix, not from the acquiring AS holder's registered country: an AS
 registered anywhere can announce a Ukrainian network.
 """
@@ -64,13 +64,12 @@ METHOD_NOTE = (
     "registered elsewhere can still announce a UA-based network. Prefixes "
     "geolocating to RU are excluded from the consolidation finding as "
     "appropriation of networks in occupied territory. Prefixes geolocating to "
-    "third countries are retained in the market set; see README on why this "
-    "asymmetry is a limitation rather than a decision."
+    "third countries are retained in the market set; see README on the asymmetry."
 )
 
 RETURNED_NOTE = (
-    "RETURNED is excluded from the finding by construction: the same origin AS "
-    "reappeared, which is observation noise at T0/T1 rather than an exit."
+    "RETURNED excluded from the finding by construction -- the same origin AS "
+    "reappeared, i.e. observation noise at T0/T1, not an exit."
 )
 
 
