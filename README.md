@@ -30,9 +30,11 @@ No network access, no API keys.
 | Operators reporting fixed access, 2024 | 3,443 |
 | Providers estimated to hold their own AS | 29.9% (PeeringDB-based, interval estimate) |
 | ASes announcing at T0 but not at T1 | 181 |
+| ASes with prefixes recovered | 179 of 181 (AS48880 and AS197710 returned none) |
 | Decline, before / after Oct 2024 | −2.9 to −4.0 / −3.6 AS per month |
 | Distinct market acquirers | 82; largest holds 12.7% of absorbed space |
 | Acquirers buying from a single seller | 73 of 82 |
+| Market-absorbed prefixes geolocating outside UA | 50 of 129, 29.1% of absorbed address space |
 | Departed UA ASes resurfacing under Russian origin | 12 |
 
 The trend difference across the policy date is not identified. Depending on how
@@ -44,6 +46,7 @@ the sign reverses. `verify_claims.py` prints all four specifications.
 ```
 scripts/asn_visibility_ua.py        registered vs routed AS series, PeeringDB classification
 scripts/prefix_substitution_ua.py   what happened to the prefixes of departed ASes
+scripts/geo_adjust_ua.py            separates occupation from market consolidation, offline
 scripts/verify_claims.py            offline check of every published figure
 data/PROVENANCE.md                  query dates, sources, why re-running gives different numbers
 ```
@@ -62,16 +65,25 @@ data/PROVENANCE.md                  query dates, sources, why re-running gives d
 | File | Contents |
 |---|---|
 | `departed_asns.csv` | The 181 ASes announcing at T0 but not at T1 |
-| `prefix_outcomes.csv` | One row per prefix (509), with outcome and new origin. Occupation not yet separated. |
-| `prefix_outcomes_geo_adjusted.csv` | Same, with each prefix geolocated and RU-announced space split out |
-| `absorbed_prefix_geo.csv` | Geolocation results for absorbed prefixes only |
+| `prefix_outcomes.csv` | One row per prefix (509: 416 IPv4, 93 IPv6), with outcome and new origin. Occupation not yet separated. |
+| `absorbed_prefix_geo.csv` | Archived RIPEstat geolocation of all 163 absorbed prefixes, retrieved 2026-08. An **input** to the adjustment, not a derived output. |
+| `acquirer_countries.csv` | Archived country attribution per acquiring AS, retrieved 2026-08. An **input**, not a derived output. |
+| `prefix_outcomes_geo_adjusted.csv` | IPv4 only (416 rows), each prefix geolocated, RU-announced space split out in `outcome_adj`. Produced by `geo_adjust_ua.py`. |
+| `acquirers_ru_filtered.csv` | Market acquirers, 82 rows. Produced by `geo_adjust_ua.py`. **Cited in the proposal.** |
+| `ru_occupation_acquirers.csv` | The 17 Russian holders announcing appropriated UA space. Produced by `geo_adjust_ua.py`. |
+| `substitution_summary_ru_adjusted.json` | Occupation separated. Produced by `geo_adjust_ua.py`. **Cited in the proposal.** |
 | `acquirers.csv` | Raw acquirer ranking, 97 rows. **Superseded** — see below. |
-| `acquirers_ru_filtered.csv` | Market acquirers, 82 rows. **Cited in the proposal.** |
-| `ru_occupation_acquirers.csv` | The 17 Russian holders announcing appropriated UA space |
-| `acquirer_countries.csv` | Country attribution per acquiring AS |
 | `substitution_summary.json` | Raw script output. **Superseded** — see below. |
-| `substitution_summary_ru_adjusted.json` | Occupation separated. **Cited in the proposal.** |
 | `prefix_substitution_raw_run.log` | Full console record of the substitution run. Its closing summary block prints the *pre-adjustment* figures (97 acquirers, 163 absorbed) — this is the raw run, kept for audit, not the reported result. |
+
+Dependency order:
+
+```
+prefix_outcomes.csv + absorbed_prefix_geo.csv  ->  geo_adjust_ua.py  ->  *_geo_adjusted, acquirers_*, *_ru_adjusted
+```
+
+No file cited in the proposal sits in this tree without either a script that
+produces it or a note marking it an archived external lookup with a retrieval date.
 
 ## Method, in three steps
 
@@ -89,9 +101,10 @@ data/PROVENANCE.md                  query dates, sources, why re-running gives d
 3. **Substitution.** For each AS announcing at 2024-09-01 but not at 2026-08-01,
    recover the prefixes it announced at T0 and ask who announces them now. Three
    outcomes: `ABSORBED` (different origin), `DARK` (nobody), `RETURNED` (same
-   origin again).
+   origin again). `geo_adjust_ua.py` then geolocates each absorbed prefix and
+   splits appropriation in occupied territory out of the consolidation figures.
 
-## Four things a reader should know before citing this
+## Six things a reader should know before citing this
 
 **`RETURNED` is a measurement artefact, and it sets the error rate.** 24 of the
 181 "departed" ASes are still announcing at least one of their original prefixes
@@ -99,7 +112,21 @@ from the same origin. They were never absent; the single-instant snapshot caught
 them mid-flap. That is a 13.3% false positive rate for the snapshot method, which
 is why the proposal commits to a multi-month window instead. Under the stricter
 definition — every prefix returned — the rate is 9.9%. The looser figure is
-reported because a partially-returned AS is equally a false exit.
+reported because a partially-returned AS is equally a false exit. The denominator
+is the 181 departed ASes; prefixes were recovered for 179 of them, and against
+that denominator the rate is 13.4%.
+
+**Every published figure is IPv4-only, and the restriction is inherited rather
+than introduced.** `prefix_outcomes.csv` holds 509 rows: 416 IPv4 and 93 IPv6.
+The adjusted files hold 416. `prefix_substitution_ua.py` assigns `addresses = 0`
+to every IPv6 prefix by construction and sums addresses over IPv4 alone, so
+address-weighted figures were already IPv4-only before any adjustment; dropping
+the IPv6 rows makes the row population match the weighting. Prefix counts are not
+comparable across families either — IPv6 blocks here run /29 to /48 against /17
+to /32 for IPv4. The dropped rows were `DARK` 75, `ABSORBED` 11, `RETURNED` 7, so
+the exclusion moves every prefix-weighted ratio below. It cannot move the
+occupation split: geolocation was obtained for all 11 absorbed IPv6 prefixes and
+none is RU (9 UA, 1 NL, 1 US).
 
 **Absorbed share depends on the denominator.** Of prefixes whose fate resolves,
 49.0% are absorbed; by IPv4 address count, 31.7%. Small providers hold small
@@ -116,6 +143,18 @@ AS holder's registered country, because an AS registered anywhere can announce a
 Ukrainian network. Two holders (INLAN, Perspektiva-TV) appear in **both** lists:
 some of their prefixes geolocate to UA and some to RU. That is the classification
 working as intended, not a duplicate.
+
+**The geolocation criterion is applied asymmetrically, and this is a limitation
+rather than a decision.** 23 absorbed prefixes geolocate to RU and are excluded
+as appropriation. 50 more geolocate to Germany, the United States, France, the
+Czech Republic, Iran, Kyrgyzstan and elsewhere, and are retained in the
+market-consolidation figure — 50 of 129 prefixes, 14,080 of 48,384 addresses,
+29.1% of absorbed space. Either geolocation is informative about where a network
+sits, in which case those 50 need an account and the consolidation figure is an
+overstatement; or it is noisy for small blocks and reflects the acquirer's
+infrastructure, in which case the RU exclusion rests on something other than
+geolocation. This is not settled here. The counts are published so a reader can
+settle it differently.
 
 **Superseded files still in the tree, and why.**
 `out2/substitution_summary.json` is the raw script output, with occupation not yet
@@ -146,6 +185,9 @@ RIPEstat and PeeringDB directly. **Re-running them will not reproduce the number
 above.** BGP is a live system: prefixes move, ASes return, PeeringDB records
 change. The archived outputs in `out/` and `out2/` are the analysis; the scripts
 are how it was produced. See `data/PROVENANCE.md` for query dates.
+
+`scripts/geo_adjust_ua.py` is different: it makes no network calls and transforms
+archived files only, so it reproduces its outputs exactly, today and later.
 
 ## License
 
