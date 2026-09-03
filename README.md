@@ -6,10 +6,13 @@ Routing-data analysis of what happened to Ukraine's small internet providers aft
 1 October 2024, when the State Tax Service withdrew their simplified tax regime.
 
 **The headline result is negative, and that is the point.** The count of routed
-Ukrainian autonomous systems shows no break at the policy date. It cannot: fewer
-than a third of the country's fixed-access providers hold an autonomous system at
-all. Routing data marks the boundary of what is observable in this industry, and
-that boundary sits above the layer where the change is happening.
+Ukrainian autonomous systems shows no break at the policy date. It cannot. On the
+reading used here, fewer than a third of the country's fixed-access providers hold
+an autonomous system at all; on two other readings of the same data the share is
+above a third. Under every reading a large part of the industry is absent from
+routing data. Routing marks the boundary of what is observable in this industry,
+and that boundary sits above the layer where the change is happening. The three
+readings and what separates them are set out below.
 
 ## Reproduce the published numbers
 
@@ -27,8 +30,8 @@ No network access, no API keys.
 | | |
 |---|---|
 | Routed UA autonomous systems, Aug 2026 | 1,584 (2,016 registered) |
-| Operators reporting fixed access, 2024 | 3,443 |
-| Providers estimated to hold their own AS | 29.9% (PeeringDB-based, interval estimate) |
+| Entities filing form 1-T for fixed access, 2024 | 3,386 (NCEC table export, captured 2026-09-02) |
+| Providers estimated to hold their own AS | 30.4% headline; 37.5% or 39.3% under the two other treatments of unset PeeringDB rows |
 | ASes announcing at T0 but not at T1 | 181 |
 | ASes with prefixes recovered | 179 of 181 (AS48880 and AS197710 returned none) |
 | Decline, before / after Oct 2024 | −2.9 to −4.0 / −3.6 AS per month |
@@ -36,6 +39,32 @@ No network access, no API keys.
 | Acquirers buying from a single seller | 73 of 82 |
 | Market-absorbed prefixes geolocating outside UA | 50 of 129, 29.1% of absorbed address space |
 | Departed UA ASes resurfacing under Russian origin | 12 |
+
+### The one-third figure is an interval, and it straddles one third
+
+PeeringDB classifies networks by `info_type`, and 288 Ukrainian networks are
+registered there. Of these, 187 carry a type in the access set
+(`Cable/DSL/ISP`, `NSP`, `Non-Profit`) and 55 carry no type at all. That share
+is applied to the 1,584 routed ASes to estimate how many are access providers,
+and the estimate is divided by 3,386 reporting entities.
+
+| Treatment of the 55 unset rows | Access share | Providers holding an AS |
+|---|---:|---:|
+| Counted as non-access (used above) | 0.6493 | 30.4% |
+| Excluded from the denominator | 0.8026 | 37.5% |
+| Counted as access | 0.8403 | 39.3% |
+
+One third is crossed once the access share exceeds 0.7125. Two of the three
+treatments cross it. No evidence here settles which treatment is right: a
+network that never filled in its type may be an access provider or may not.
+The first treatment is used in the headline because it is the one that does not
+assume the unknown rows resemble the known ones, and `verify_claims.py` prints
+all three so the choice is visible without reading the code.
+
+What does not change across the three is the shape of the finding. Ukraine had
+between roughly 3,400 reporting entities and 1,584 routed autonomous systems in
+2024, and on any treatment a large part of that population is invisible to
+routing data.
 
 The trend difference across the policy date is not identified. Depending on how
 the pre-period is bounded, the estimate shows either acceleration or deceleration;

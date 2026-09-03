@@ -15,7 +15,7 @@ Produces three numbers that a research proposal can cite:
   1. Registered vs routed ASNs for UA, monthly, 2021-01 .. present  (RIPEstat)
   2. How many of those ASNs are actually ACCESS PROVIDERS rather than
      hosting / content / enterprise networks                        (PeeringDB)
-  3. The resulting share of NCEC-registered providers that hold an ASN
+  3. The resulting share of NCEC reporting entities that hold an ASN
      of their own -- i.e. the ceiling on what routing data can see.
 
 Sources are public and unauthenticated.
@@ -46,11 +46,21 @@ UA_TZ_SAFE_HOUR = "T00:00"          # RIS dumps land at 00:00 / 08:00 / 16:00 UT
 POLICY_DATE = "2024-10-01"          # simplified tax regime withdrawn
 INVASION_DATE = "2022-02-24"
 
-# NCEC / industry reference points. Edit as better figures are confirmed.
-# 3443 = operators that reported fixed internet access, H1 2024 (NCEC).
-# ~3500 = figure cited by InAU and by the Rada tax committee chair.
-PROVIDERS_REGISTERED = {
-    "2024-06-30": 3443,
+# NCEC reference point. This counts entities that filed reporting form 1-T for
+# fixed internet access in the stated cumulative period. It is not a count of
+# registered providers: the register and the reporting population are different
+# objects and the difference is the subject of this work.
+#
+# 3386 = respondents, cumulative Q1-4 2024, read from the panel's show-as-table
+#        export, captured 2026-09-02. Source row and precision are in
+#        data/nkek-fixed-access-observations.csv; see data/PROVENANCE.md.
+#
+# Earlier value 3443, used up to commit 36c8d7b, was the Q1-2 2024 slice as
+# published in the press citing NCEC in October 2024. The same slice reads 3450
+# on the panel in September 2026, the seven-entity difference being late filings.
+# It was superseded here because it is a half-year slice under an annual label.
+REPORTING_ENTITIES = {
+    "2024-12-31": 3386,
 }
 
 UA_AGENT = {"User-Agent": "asn-visibility-research/1.0 (academic use)"}
@@ -154,7 +164,7 @@ def summarise(asns: pd.DataFrame, pdb: pd.DataFrame) -> dict:
     # access-provider fraction among routed ASNs, not as a census.
     est_access_asns = round(routed * access_share) if pdb_total else None
 
-    providers = list(PROVIDERS_REGISTERED.values())[-1]
+    providers = list(REPORTING_ENTITIES.values())[-1]
 
     out = {
         "as_of": str(latest["date"].date()),
@@ -165,7 +175,8 @@ def summarise(asns: pd.DataFrame, pdb: pd.DataFrame) -> dict:
         "peeringdb_access_type": pdb_access,
         "peeringdb_access_share": round(access_share, 4) if pdb_total else None,
         "estimated_access_provider_asns": est_access_asns,
-        "ncec_registered_providers": providers,
+        "ncec_reporting_entities": providers,
+        "ncec_reporting_slice": "respondents, Q1-4 2024, table export, captured 2026-09-02",
         "share_of_providers_holding_own_asn": (
             round(est_access_asns / providers, 4) if est_access_asns else None
         ),
@@ -203,10 +214,11 @@ def plot(asns: pd.DataFrame, summary: dict, path: str):
         ax1.text(pd.Timestamp(d), ax1.get_ylim()[1], f"  {txt}",
                  rotation=90, va="top", ha="left", fontsize=8, color="0.3")
 
-    prov = summary.get("ncec_registered_providers")
+    prov = summary.get("ncec_reporting_entities")
     if prov:
         ax1.axhline(prov, color="firebrick", ls=":", lw=1.5)
-        ax1.text(asns["date"].iloc[2], prov, f"  NCEC-registered providers ≈ {prov}",
+        ax1.text(asns["date"].iloc[2], prov,
+                 f"  Entities filing 1-T for fixed access, 2024: {prov:,}",
                  va="bottom", fontsize=8, color="firebrick")
 
     ax1.set_ylabel("Autonomous systems, Ukraine")
@@ -224,6 +236,21 @@ def plot(asns: pd.DataFrame, summary: dict, path: str):
     fig.tight_layout()
     fig.savefig(path, dpi=170)
     print(f"  wrote {path}")
+
+
+def replot():
+    """Redraw the chart from the archived outputs, without touching the network.
+
+    The reference figure and the labels derived from it change more often than
+    the routing snapshot does. Refetching to redraw would replace the snapshot,
+    so this path reads what is already in out/ and calls the same plot().
+    """
+    asns = pd.read_csv(f"{OUT}/ua_asns_monthly.csv", parse_dates=["date"])
+    with open(f"{OUT}/ua_summary.json") as f:
+        summary = json.load(f)
+    print(f"[replot] routing snapshot as_of {summary['as_of']}, "
+          f"reference figure {summary['ncec_reporting_entities']:,}")
+    plot(asns, summary, f"{OUT}/ua_asn_visibility.png")
 
 
 def main():
@@ -252,4 +279,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if "--replot" in sys.argv:
+        replot()
+    else:
+        main()

@@ -71,13 +71,34 @@ check("pre-policy decline ~3 routed AS/month",
 
 # ---------------------------------------------------------------- visibility
 s = json.load(open(ROOT / "out/ua_summary.json"))
-check("3,443 operators reported providing fixed access (2024)",
-      s["ncec_registered_providers"], s["ncec_registered_providers"] == 3443)
+
+obs = pd.read_csv(ROOT / "data/nkek-fixed-access-observations.csv")
+row = obs[(obs.indicator == "respondents") & (obs.slice == "Q1-4")
+          & (obs.year == 2024)].iloc[0]
+check("3,386 entities filed form 1-T for fixed access, 2024 (NCEC table export)",
+      f"{int(row.value)} in data/nkek-fixed-access-observations.csv "
+      f"(precision={row.precision}, capture={row.capture})",
+      int(row.value) == s["ncec_reporting_entities"],
+      "Read from the source table, not from the summary this pipeline wrote. "
+      "Supersedes 3443, the Q1-2 2024 slice published in October 2024.")
+
 check("roughly 1,600 routed autonomous systems",
       s["asns_routed_ua"], 1500 <= s["asns_routed_ua"] <= 1700)
+
+t = s["share_by_treatment_of_unset"]
 check("fewer than a third of providers hold an AS of their own",
-      f"{s['share_of_providers_holding_own_asn']:.1%} (PeeringDB-based estimate)",
-      s["share_of_providers_holding_own_asn"] < 1 / 3)
+      f"{s['share_of_providers_holding_own_asn']:.1%} "
+      f"(PeeringDB-based, {s['peeringdb_unset_type']} of "
+      f"{s['peeringdb_ua_networks']} rows carry no info_type)",
+      s["share_of_providers_holding_own_asn"] < 1 / 3,
+      "Headline figure treats unset rows as non-access.")
+
+check("the headline share is sensitive to the treatment of unset rows",
+      "; ".join(f"{k}: {v:.1%}" for k, v in t.items()),
+      min(t.values()) < 1 / 3 < max(t.values()),
+      f"One third is crossed once the access share exceeds "
+      f"{s['one_third_crossed_when_access_share_exceeds']}. Two of the three "
+      "treatments cross it; the headline uses the one that does not.")
 
 # ---------------------------------------------------------------- substitution
 adj = json.load(open(ROOT / "out2/substitution_summary_ru_adjusted.json"))

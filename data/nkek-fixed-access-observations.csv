@@ -1,0 +1,167 @@
+tab,slice,period,year,indicator,entity,value,unit,precision,capture,note
+Фікс. доступ до Інтернету,Q1-2,2021 Q1-2,2021,arpu_monthly,,176.1,UAH/line/month,label,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2022 Q1-2,2022,arpu_monthly,,182.1,UAH/line/month,label,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2023 Q1-2,2023,arpu_monthly,,210.8,UAH/line/month,label,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2024 Q1-2,2024,arpu_monthly,,228.3,UAH/line/month,label,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2025 Q1-2,2025,arpu_monthly,,237.6,UAH/line/month,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2021 Q1-4,2021,arpu_monthly,,172.3,UAH/line/month,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2022 Q1-4,2022,arpu_monthly,,185.2,UAH/line/month,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2023 Q1-4,2023,arpu_monthly,,218.8,UAH/line/month,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,arpu_monthly,,229.7,UAH/line/month,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,arpu_monthly,,233.2,UAH/line/month,label,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2021 Q1-2,2021,lines_rural,,1838002,lines,tooltip,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2022 Q1-2,2022,lines_rural,,1688079,lines,tooltip,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2023 Q1-2,2023,lines_rural,,1908029,lines,tooltip,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2024 Q1-2,2024,lines_rural,,2294948,lines,tooltip,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2025 Q1-2,2025,lines_rural,,2462308,lines,tooltip,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2021 Q1-4,2021,lines_rural,,1900000,lines,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2022 Q1-4,2022,lines_rural,,1800000,lines,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2023 Q1-4,2023,lines_rural,,2100000,lines,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,lines_rural,,2266163,lines,tooltip,cap-2,
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,lines_rural,,2624043,lines,tooltip,cap-2,
+Фікс. доступ до Інтернету,Q1-2,2021 Q1-2,2021,lines_total,,7976827,lines,tooltip,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2022 Q1-2,2022,lines_total,,7129278,lines,tooltip,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2023 Q1-2,2023,lines_total,,7579184,lines,tooltip,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2024 Q1-2,2024,lines_total,,8496449,lines,tooltip,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2025 Q1-2,2025,lines_total,,8469066,lines,tooltip,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2021 Q1-4,2021,lines_total,,8100000,lines,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2022 Q1-4,2022,lines_total,,7500000,lines,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2023 Q1-4,2023,lines_total,,8100000,lines,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,lines_total,,8196432,lines,tooltip,cap-2,
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,lines_total,,8702808,lines,tooltip,cap-2,
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,provider_revenue,Бізнес і Технології,0.34,UAH billion,label,cap-2,rank 7
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,provider_revenue,ВОЛЯ-КАБЕЛЬ,0.69,UAH billion,label,cap-2,rank 4
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,provider_revenue,ДАТАГРУП,0.77,UAH billion,label,cap-2,rank 3
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,provider_revenue,Київстар,1.56,UAH billion,label,cap-2,rank 2
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,provider_revenue,МЕРЕЖА ЛАНЕТ,0.23,UAH billion,label,cap-2,rank 9
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,provider_revenue,НАУКОВО-ВИРОБНИЧЕ …,0.17,UAH billion,label,cap-2,rank 10 (name truncated in UI)
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,provider_revenue,Науковопромислова компа…,0.49,UAH billion,label,cap-2,rank 5 (name truncated in UI)
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,provider_revenue,Укртелеком,1.64,UAH billion,label,cap-2,rank 1
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,provider_revenue,ФАРЛЕП-ІНВЕСТ,0.25,UAH billion,label,cap-2,rank 8
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,provider_revenue,ФРІНЕТ,0.37,UAH billion,label,cap-2,rank 6
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,provider_revenue,Бізнес і Технології,0.38,UAH billion,label,cap-2,rank 7
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,provider_revenue,ВОЛЯ-КАБЕЛЬ,0.77,UAH billion,label,cap-2,rank 3
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,provider_revenue,ДАТАГРУП,0.73,UAH billion,label,cap-2,rank 5
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,provider_revenue,Київстар,1.76,UAH billion,label,cap-2,rank 1
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,provider_revenue,МЕРЕЖА ЛАНЕТ,0.3,UAH billion,label,cap-2,rank 8
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,provider_revenue,НАУКОВО-ВИРОБНИЧЕ …,0.26,UAH billion,label,cap-2,rank 10
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,provider_revenue,Науковопромислова компа…,0.75,UAH billion,label,cap-2,rank 4 (name truncated in UI)
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,provider_revenue,Укртелеком,1.66,UAH billion,label,cap-2,rank 2
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,provider_revenue,ФАРЛЕП-ІНВЕСТ,0.38,UAH billion,label,cap-2,rank 6
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,provider_revenue,ФРІНЕТ,0.28,UAH billion,label,cap-2,rank 9
+Фікс. доступ до Інтернету,Q1,2021 Q1,2021,respondents,,2940,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2022 Q1,2022,respondents,,2259,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2023 Q1,2023,respondents,,2594,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2024 Q1,2024,respondents,,3207,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2025 Q1,2025,respondents,,1917,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2026 Q1,2026,respondents,,1883,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2021 Q1-2,2021,respondents,,3036,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2022 Q1-2,2022,respondents,,2458,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2023 Q1-2,2023,respondents,,2671,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2024 Q1-2,2024,respondents,,3450,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2025 Q1-2,2025,respondents,,1995,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1-3,2021 Q1-3,2021,respondents,,3222,entities,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2022 Q1-3,2022,respondents,,2331,entities,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2023 Q1-3,2023,respondents,,2625,entities,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2024 Q1-3,2024,respondents,,3474,entities,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2025 Q1-3,2025,respondents,,2002,entities,table,cap-4,
+Фікс. доступ до Інтернету,Q1-4,2021 Q1-4,2021,respondents,,3003,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2022 Q1-4,2022,respondents,,2702,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2023 Q1-4,2023,respondents,,3088,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,respondents,,3386,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,respondents,,1955,entities,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2021 Q1,2021,revenue_to_providers,,307884030,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2022 Q1,2022,revenue_to_providers,,243921460,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2023 Q1,2023,revenue_to_providers,,189715580,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2024 Q1,2024,revenue_to_providers,,270453420,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2025 Q1,2025,revenue_to_providers,,308223340,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2026 Q1,2026,revenue_to_providers,,310963170,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2021 Q1-2,2021,revenue_to_providers,,675925460,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2022 Q1-2,2022,revenue_to_providers,,456821850,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2023 Q1-2,2023,revenue_to_providers,,391047760,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2024 Q1-2,2024,revenue_to_providers,,574343730,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2025 Q1-2,2025,revenue_to_providers,,624289680,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-3,2021 Q1-3,2021,revenue_to_providers,,915046960,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2022 Q1-3,2022,revenue_to_providers,,653700290,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2023 Q1-3,2023,revenue_to_providers,,587559530,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2024 Q1-3,2024,revenue_to_providers,,817329940,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2025 Q1-3,2025,revenue_to_providers,,914568360,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-4,2021 Q1-4,2021,revenue_to_providers,,1106266650,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2022 Q1-4,2022,revenue_to_providers,,674067910,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2023 Q1-4,2023,revenue_to_providers,,891684530,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,revenue_to_providers,,1121157110,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,revenue_to_providers,,1209474240,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2021 Q1,2021,revenue_to_users,,3811429290,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2022 Q1,2022,revenue_to_users,,3502432620,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2023 Q1,2023,revenue_to_users,,4495627760,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2024 Q1,2024,revenue_to_users,,5296431670,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2025 Q1,2025,revenue_to_users,,5635207250,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2026 Q1,2026,revenue_to_users,,6177045440,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2021 Q1-2,2021,revenue_to_users,,7752927810,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2022 Q1-2,2022,revenue_to_users,,7333512220,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2023 Q1-2,2023,revenue_to_users,,9195873180,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2024 Q1-2,2024,revenue_to_users,,11062745290,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2025 Q1-2,2025,revenue_to_users,,11448709720,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-3,2021 Q1-3,2021,revenue_to_users,,11961016740,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2022 Q1-3,2022,revenue_to_users,,10966291030,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2023 Q1-3,2023,revenue_to_users,,13885584870,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2024 Q1-3,2024,revenue_to_users,,16622547000,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2025 Q1-3,2025,revenue_to_users,,17023345120,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-4,2021 Q1-4,2021,revenue_to_users,,15651598030,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2022 Q1-4,2022,revenue_to_users,,16015042560,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2023 Q1-4,2023,revenue_to_users,,20388391010,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,revenue_to_users,,21471456510,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,revenue_to_users,,23145992420,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2021 Q1,2021,revenue_total,,4119313320,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2022 Q1,2022,revenue_total,,3746354080,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2023 Q1,2023,revenue_total,,4685343340,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2024 Q1,2024,revenue_total,,5566885090,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2025 Q1,2025,revenue_total,,5943430590,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1,2026 Q1,2026,revenue_total,,6488008610,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2021 Q1-2,2021,revenue_total,,8428853270,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2022 Q1-2,2022,revenue_total,,7790334070,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2023 Q1-2,2023,revenue_total,,9586920940,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2024 Q1-2,2024,revenue_total,,11637089020,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2025 Q1-2,2025,revenue_total,,12072999400,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-3,2021 Q1-3,2021,revenue_total,,12876063700,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2022 Q1-3,2022,revenue_total,,11619991320,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2023 Q1-3,2023,revenue_total,,14473144400,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2024 Q1-3,2024,revenue_total,,17439876940,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-3,2025 Q1-3,2025,revenue_total,,17937913480,UAH,table,cap-4,
+Фікс. доступ до Інтернету,Q1-4,2021 Q1-4,2021,revenue_total,,16757864680,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2022 Q1-4,2022,revenue_total,,16689110470,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2023 Q1-4,2023,revenue_total,,21280075540,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,revenue_total,,22592613620,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,revenue_total,,24355466660,UAH,table,cap-5,
+Фікс. доступ до Інтернету,Q1-2,2021 Q1-2,2021,share_FTTx,,53.4,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2022 Q1-2,2022,share_FTTx,,53.0,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2023 Q1-2,2023,share_FTTx,,48.1,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2024 Q1-2,2024,share_FTTx,,43.5,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2025 Q1-2,2025,share_FTTx,,40.7,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2021 Q1-4,2021,share_FTTx,,53.1,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2022 Q1-4,2022,share_FTTx,,51.0,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2023 Q1-4,2023,share_FTTx,,46.7,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,share_FTTx,,43.6,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,share_FTTx,,39.3,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2021 Q1-2,2021,share_unattributed,,9.4,percent,label,cap-1,Thin band; technology not recoverable from screenshot
+Фікс. доступ до Інтернету,Q1-2,2021 Q1-2,2021,share_unattributed,,3.7,percent,label,cap-1,Thin band; technology not recoverable from screenshot
+Фікс. доступ до Інтернету,Q1-2,2022 Q1-2,2022,share_unattributed,,5.6,percent,label,cap-1,Thin band; technology not recoverable from screenshot
+Фікс. доступ до Інтернету,Q1-2,2022 Q1-2,2022,share_unattributed,,3.7,percent,label,cap-1,Thin band; technology not recoverable from screenshot
+Фікс. доступ до Інтернету,Q1-2,2022 Q1-2,2022,share_unattributed,,4.1,percent,label,cap-1,Thin band; technology not recoverable from screenshot
+Фікс. доступ до Інтернету,Q1-2,2023 Q1-2,2023,share_unattributed,,6.7,percent,label,cap-1,Thin band; technology not recoverable from screenshot
+Фікс. доступ до Інтернету,Q1-2,2024 Q1-2,2024,share_unattributed,,5.4,percent,label,cap-1,Thin band; technology not recoverable from screenshot
+Фікс. доступ до Інтернету,Q1-4,2021 Q1-4,2021,share_unattributed,,7.0,percent,label,cap-1,Thin band; technology not recoverable from screenshot
+Фікс. доступ до Інтернету,Q1-4,2022 Q1-4,2022,share_unattributed,,4.1,percent,label,cap-1,Thin band; technology not recoverable from screenshot
+Фікс. доступ до Інтернету,Q1-4,2022 Q1-4,2022,share_unattributed,,4.2,percent,label,cap-1,Thin band; technology not recoverable from screenshot
+Фікс. доступ до Інтернету,Q1-4,2022 Q1-4,2022,share_unattributed,,3.7,percent,label,cap-1,Thin band; technology not recoverable from screenshot
+Фікс. доступ до Інтернету,Q1-4,2023 Q1-4,2023,share_unattributed,,5.8,percent,label,cap-1,Thin band; technology not recoverable from screenshot
+Фікс. доступ до Інтернету,Q1-2,2021 Q1-2,2021,share_xPON,,28.6,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2022 Q1-2,2022,share_xPON,,32.6,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2023 Q1-2,2023,share_xPON,,38.0,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2024 Q1-2,2024,share_xPON,,46.2,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-2,2025 Q1-2,2025,share_xPON,,52.1,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2021 Q1-4,2021,share_xPON,,31.7,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2022 Q1-4,2022,share_xPON,,35.8,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2023 Q1-4,2023,share_xPON,,41.4,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2024 Q1-4,2024,share_xPON,,48.4,percent,label,cap-1,
+Фікс. доступ до Інтернету,Q1-4,2025 Q1-4,2025,share_xPON,,54.0,percent,label,cap-1,

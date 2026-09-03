@@ -5,11 +5,20 @@
   "asns_allocated_but_dark": 432,
   "peeringdb_ua_networks": 288,
   "peeringdb_access_type": 187,
+  "peeringdb_unset_type": 55,
   "peeringdb_access_share": 0.6493,
   "estimated_access_provider_asns": 1028,
-  "ncec_registered_providers": 3443,
-  "share_of_providers_holding_own_asn": 0.2986,
-  "upper_bound_if_all_routed_were_isps": 0.4601,
+  "ncec_reporting_entities": 3386,
+  "ncec_reporting_slice": "respondents, Q1-4 2024, precision=table, capture=cap-5",
+  "ncec_captured": "2026-09-02",
+  "share_of_providers_holding_own_asn": 0.3036,
+  "share_by_treatment_of_unset": {
+    "unset_as_non_access": 0.3036,
+    "unset_excluded": 0.3754,
+    "unset_as_access": 0.3931
+  },
+  "one_third_crossed_when_access_share_exceeds": 0.7125,
+  "upper_bound_if_all_routed_were_isps": 0.4678,
   "routed_pre_policy": 1661,
   "routed_post_policy_12m": 1602,
   "routed_change_12m_after_policy": -59

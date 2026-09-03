@@ -1,0 +1,1164 @@
+{
+  "dataset": "NKEK fixed-access market dashboard — captured series, all four cumulative slices",
+  "schema_version": "1.1",
+  "compiled": "2026-09-02",
+  "compiled_by": "Vitalii Atanasov",
+  "source": {
+    "regulator": "НКЕК — Національна комісія, що здійснює державне регулювання у сферах електронних комунікацій, радіочастотного спектра та надання послуг поштового зв'язку",
+    "url": "https://nkek.gov.ua/diialnist/sfery-diialnosti/elektronni-komunikatsii/elektronni-komunikatsii-u-tsyfrakh",
+    "tab": "Фікс. доступ до Інтернету",
+    "underlying_form": "Регуляторна звітність № 1-Т «Сфера телекомунікацій»",
+    "reporting_order": "Порядок надання операторами, провайдерами телекомунікацій звітності та інформації, рішення НКРЗІ від 05.04.2016 № 180, зареєстровано в Мін'юсті 18.05.2016 № 739/28869",
+    "note_single_origin": "Respondent counts, line counts, revenue and ARPU on this tab are all derived from the same body of submitted 1-T returns. They are not independent measurements."
+  },
+  "capture": {
+    "captures": [
+      {
+        "id": "cap-1",
+        "date": "2026-09-02",
+        "time_local": null,
+        "timezone": "Europe/Kyiv",
+        "slices": [
+          "Q1-4",
+          "Q1-2"
+        ],
+        "content": "Both slice overviews; tooltips for lines Q1-2 for all five years",
+        "time_note": "Clock time not recorded at capture."
+      },
+      {
+        "id": "cap-2",
+        "date": "2026-09-02",
+        "time_local": "18:17",
+        "timezone": "Europe/Kyiv",
+        "slices": [
+          "Q1-4"
+        ],
+        "content": "Tooltips for lines Q1-4 2024 and 2025; drill-through provider lists 2024 and 2025"
+      },
+      {
+        "id": "cap-3",
+        "date": "2026-09-02",
+        "time_local": null,
+        "timezone": "Europe/Kyiv",
+        "slices": [
+          "Q1-4"
+        ],
+        "content": "Enlarged crop of the 2024 Q1-4 respondent label, read at increased browser zoom",
+        "method": "zoom",
+        "supersedes": "Reading of the same label from cap-1 full-dashboard screenshots"
+      },
+      {
+        "id": "cap-4",
+        "date": "2026-09-02",
+        "time_local": null,
+        "timezone": "Europe/Kyiv",
+        "slices": [
+          "Q1-3"
+        ],
+        "content": "Show-as-table export of the revenue panel: retail, wholesale and respondent count, all five years",
+        "method": "table_export",
+        "note": "Exact values, no label rounding and no occlusion. Highest-quality extraction path obtained so far. Dashboard became unavailable after this capture."
+      },
+      {
+        "id": "cap-4",
+        "date": "2026-09-02",
+        "time_local": null,
+        "timezone": "Europe/Kyiv",
+        "slices": [
+          "Q1-3"
+        ],
+        "content": "Revenue panel exported via the visual's show-as-table function. Exact values for Користувачам, Постачальникам мереж/послуг and Респондентів, 2021-2025.",
+        "method": "show_as_table",
+        "note": "Independent extraction path. Not subject to label occlusion or rounding."
+      },
+      {
+        "id": "cap-5",
+        "date": "2026-09-02",
+        "time_local": null,
+        "timezone": "Europe/Kyiv",
+        "slices": [
+          "Q1",
+          "Q1-2",
+          "Q1-4"
+        ],
+        "content": "Revenue panel exported via show-as-table for the three remaining slices. Q1 carries a 2026 row.",
+        "method": "show_as_table"
+      }
+    ],
+    "precision_model": {
+      "label": "Value printed on the chart. Line counts rounded to 0.1M, revenue to 0.1bn, shares and ARPU to one decimal. Respondent counts printed as integers and not rounded.",
+      "tooltip": "Value returned by hover, full precision.",
+      "derived": "Computed here from captured values, not read off the dashboard.",
+      "extraction_path_note": "Agreement between screenshots of the same rendering confirms that the rendering is reproducible, not that the glyph was read correctly. A label reading is only independent when obtained by a different extraction path: zoom, focus mode, or the panel's show-as-table export.",
+      "table_export": "Values returned by the panel's show-as-table view. Exact, free of both label rounding and marker occlusion. Supersedes label and tooltip readings for the same cell.",
+      "table": "Value read from the panel's show-as-table export. Full precision, no occlusion."
+    }
+  },
+  "series": {
+    "respondents": {
+      "ukr_label": "Респондентів",
+      "definition": "Count of entities that filed form 1-T for the stated cumulative period on this market. Not a census of registered providers.",
+      "unit": "entities",
+      "Q1-4": [
+        {
+          "period": "2021 Q1-4",
+          "value": 3003,
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2022 Q1-4",
+          "value": 2702,
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2023 Q1-4",
+          "value": 3088,
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2024 Q1-4",
+          "value": 3386,
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2025 Q1-4",
+          "value": 1955,
+          "precision": "table",
+          "capture": "cap-5"
+        }
+      ],
+      "Q1-2": [
+        {
+          "period": "2021 Q1-2",
+          "value": 3036,
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2022 Q1-2",
+          "value": 2458,
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2023 Q1-2",
+          "value": 2671,
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2024 Q1-2",
+          "value": 3450,
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2025 Q1-2",
+          "value": 1995,
+          "precision": "table",
+          "capture": "cap-5"
+        }
+      ],
+      "Q1-3": [
+        {
+          "period": "2021 Q1-3",
+          "value": 3222,
+          "precision": "table",
+          "capture": "cap-4"
+        },
+        {
+          "period": "2022 Q1-3",
+          "value": 2331,
+          "precision": "table",
+          "capture": "cap-4"
+        },
+        {
+          "period": "2023 Q1-3",
+          "value": 2625,
+          "precision": "table",
+          "capture": "cap-4"
+        },
+        {
+          "period": "2024 Q1-3",
+          "value": 3474,
+          "precision": "table",
+          "capture": "cap-4"
+        },
+        {
+          "period": "2025 Q1-3",
+          "value": 2002,
+          "precision": "table",
+          "capture": "cap-4"
+        }
+      ],
+      "Q1": [
+        {
+          "period": "2021 Q1",
+          "value": 2940,
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2022 Q1",
+          "value": 2259,
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2023 Q1",
+          "value": 2594,
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2024 Q1",
+          "value": 3207,
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2025 Q1",
+          "value": 1917,
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2026 Q1",
+          "value": 1883,
+          "precision": "table",
+          "capture": "cap-5"
+        }
+      ],
+      "extraction_note": "All values now from show-as-table export. Hovering the marker returns a provider drill-through, not the value; the 2024 Q1-4 label was additionally occluded. The table path removes both problems."
+    },
+    "lines_total": {
+      "ukr_label": "Динаміка кількості ліній(точок) фіксованого доступу до мережі Інтернет, од. — Всього",
+      "unit": "lines",
+      "Q1-4": [
+        {
+          "period": "2021 Q1-4",
+          "value": 8100000,
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2022 Q1-4",
+          "value": 7500000,
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2023 Q1-4",
+          "value": 8100000,
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2024 Q1-4",
+          "value": 8196432,
+          "precision": "tooltip",
+          "capture": "cap-2"
+        },
+        {
+          "period": "2025 Q1-4",
+          "value": 8702808,
+          "precision": "tooltip",
+          "capture": "cap-2"
+        }
+      ],
+      "Q1-2": [
+        {
+          "period": "2021 Q1-2",
+          "value": 7976827,
+          "precision": "tooltip",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2022 Q1-2",
+          "value": 7129278,
+          "precision": "tooltip",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2023 Q1-2",
+          "value": 7579184,
+          "precision": "tooltip",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2024 Q1-2",
+          "value": 8496449,
+          "precision": "tooltip",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2025 Q1-2",
+          "value": 8469066,
+          "precision": "tooltip",
+          "capture": "cap-1"
+        }
+      ]
+    },
+    "lines_rural": {
+      "ukr_label": "у сільській місцевості",
+      "unit": "lines",
+      "Q1-4": [
+        {
+          "period": "2021 Q1-4",
+          "value": 1900000,
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2022 Q1-4",
+          "value": 1800000,
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2023 Q1-4",
+          "value": 2100000,
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2024 Q1-4",
+          "value": 2266163,
+          "precision": "tooltip",
+          "capture": "cap-2"
+        },
+        {
+          "period": "2025 Q1-4",
+          "value": 2624043,
+          "precision": "tooltip",
+          "capture": "cap-2"
+        }
+      ],
+      "Q1-2": [
+        {
+          "period": "2021 Q1-2",
+          "value": 1838002,
+          "precision": "tooltip",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2022 Q1-2",
+          "value": 1688079,
+          "precision": "tooltip",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2023 Q1-2",
+          "value": 1908029,
+          "precision": "tooltip",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2024 Q1-2",
+          "value": 2294948,
+          "precision": "tooltip",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2025 Q1-2",
+          "value": 2462308,
+          "precision": "tooltip",
+          "capture": "cap-1"
+        }
+      ]
+    },
+    "revenue": {
+      "ukr_label": "Доходи від надання доступу до фіксованої мережі Інтернет, грн",
+      "unit": "UAH, exact",
+      "components": [
+        "Користувачам",
+        "Постачальникам мереж/послуг"
+      ],
+      "Q1-4": [
+        {
+          "period": "2021 Q1-4",
+          "to_users": 15651598030,
+          "to_providers": 1106266650,
+          "total": 16757864680,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2022 Q1-4",
+          "to_users": 16015042560,
+          "to_providers": 674067910,
+          "total": 16689110470,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2023 Q1-4",
+          "to_users": 20388391010,
+          "to_providers": 891684530,
+          "total": 21280075540,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2024 Q1-4",
+          "to_users": 21471456510,
+          "to_providers": 1121157110,
+          "total": 22592613620,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2025 Q1-4",
+          "to_users": 23145992420,
+          "to_providers": 1209474240,
+          "total": 24355466660,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        }
+      ],
+      "Q1-2": [
+        {
+          "period": "2021 Q1-2",
+          "to_users": 7752927810,
+          "to_providers": 675925460,
+          "total": 8428853270,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2022 Q1-2",
+          "to_users": 7333512220,
+          "to_providers": 456821850,
+          "total": 7790334070,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2023 Q1-2",
+          "to_users": 9195873180,
+          "to_providers": 391047760,
+          "total": 9586920940,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2024 Q1-2",
+          "to_users": 11062745290,
+          "to_providers": 574343730,
+          "total": 11637089020,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2025 Q1-2",
+          "to_users": 11448709720,
+          "to_providers": 624289680,
+          "total": 12072999400,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        }
+      ],
+      "Q1-3": [
+        {
+          "period": "2021 Q1-3",
+          "to_users": 11961016740,
+          "to_providers": 915046960,
+          "total": 12876063700,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-4"
+        },
+        {
+          "period": "2022 Q1-3",
+          "to_users": 10966291030,
+          "to_providers": 653700290,
+          "total": 11619991320,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-4"
+        },
+        {
+          "period": "2023 Q1-3",
+          "to_users": 13885584870,
+          "to_providers": 587559530,
+          "total": 14473144400,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-4"
+        },
+        {
+          "period": "2024 Q1-3",
+          "to_users": 16622547000,
+          "to_providers": 817329940,
+          "total": 17439876940,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-4"
+        },
+        {
+          "period": "2025 Q1-3",
+          "to_users": 17023345120,
+          "to_providers": 914568360,
+          "total": 17937913480,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-4"
+        }
+      ],
+      "Q1": [
+        {
+          "period": "2021 Q1",
+          "to_users": 3811429290,
+          "to_providers": 307884030,
+          "total": 4119313320,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2022 Q1",
+          "to_users": 3502432620,
+          "to_providers": 243921460,
+          "total": 3746354080,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2023 Q1",
+          "to_users": 4495627760,
+          "to_providers": 189715580,
+          "total": 4685343340,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2024 Q1",
+          "to_users": 5296431670,
+          "to_providers": 270453420,
+          "total": 5566885090,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2025 Q1",
+          "to_users": 5635207250,
+          "to_providers": 308223340,
+          "total": 5943430590,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        },
+        {
+          "period": "2026 Q1",
+          "to_users": 6177045440,
+          "to_providers": 310963170,
+          "total": 6488008610,
+          "unit": "UAH",
+          "precision": "table",
+          "capture": "cap-5"
+        }
+      ]
+    },
+    "arpu": {
+      "ukr_label": "Середньомісячний дохід від надання послуг доступу до фіксованої мережі Інтернету у розрахунку на одну лінію(точку), грн/міс.",
+      "unit": "UAH per line per month",
+      "Q1-4": [
+        {
+          "period": "2021 Q1-4",
+          "value": 172.3,
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2022 Q1-4",
+          "value": 185.2,
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2023 Q1-4",
+          "value": 218.8,
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2024 Q1-4",
+          "value": 229.7,
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2025 Q1-4",
+          "value": 233.2,
+          "precision": "label",
+          "capture": "cap-1"
+        }
+      ],
+      "Q1-2": [
+        {
+          "period": "2021 Q1-2",
+          "value": 176.1,
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2022 Q1-2",
+          "value": 182.1,
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2023 Q1-2",
+          "value": 210.8,
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2024 Q1-2",
+          "value": 228.3,
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2025 Q1-2",
+          "value": 237.6,
+          "precision": "label",
+          "capture": "cap-1"
+        }
+      ]
+    },
+    "technology_share": {
+      "ukr_label": "Розподіл ліній(точок) фіксованого доступу до мережі Інтернет в розрізі технологій",
+      "unit": "percent of lines",
+      "legend_order": [
+        "xPON",
+        "FTTx",
+        "xDSL",
+        "Супутник",
+        "DOCSIS",
+        "Радіодоступ_ШСД",
+        "Інші технології"
+      ],
+      "attribution_caveat": "Only the two largest bands are positionally unambiguous: the bottom band is xPON and the band above it is FTTx. Thin bands carry leader labels whose placement drifts between adjacent columns, so their technology attribution is not recoverable from the screenshots. Labels below are recorded as read, with attribution only where certain.",
+      "Q1-4": [
+        {
+          "period": "2021 Q1-4",
+          "xPON": 31.7,
+          "FTTx": 53.1,
+          "unattributed_labels": [
+            7.0
+          ],
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2022 Q1-4",
+          "xPON": 35.8,
+          "FTTx": 51.0,
+          "unattributed_labels": [
+            4.1,
+            4.2,
+            3.7
+          ],
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2023 Q1-4",
+          "xPON": 41.4,
+          "FTTx": 46.7,
+          "unattributed_labels": [
+            5.8
+          ],
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2024 Q1-4",
+          "xPON": 48.4,
+          "FTTx": 43.6,
+          "unattributed_labels": [],
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2025 Q1-4",
+          "xPON": 54.0,
+          "FTTx": 39.3,
+          "unattributed_labels": [],
+          "precision": "label",
+          "capture": "cap-1"
+        }
+      ],
+      "Q1-2": [
+        {
+          "period": "2021 Q1-2",
+          "xPON": 28.6,
+          "FTTx": 53.4,
+          "unattributed_labels": [
+            9.4,
+            3.7
+          ],
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2022 Q1-2",
+          "xPON": 32.6,
+          "FTTx": 53.0,
+          "unattributed_labels": [
+            5.6,
+            3.7,
+            4.1
+          ],
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2023 Q1-2",
+          "xPON": 38.0,
+          "FTTx": 48.1,
+          "unattributed_labels": [
+            6.7
+          ],
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2024 Q1-2",
+          "xPON": 46.2,
+          "FTTx": 43.5,
+          "unattributed_labels": [
+            5.4
+          ],
+          "precision": "label",
+          "capture": "cap-1"
+        },
+        {
+          "period": "2025 Q1-2",
+          "xPON": 52.1,
+          "FTTx": 40.7,
+          "unattributed_labels": [],
+          "precision": "label",
+          "capture": "cap-1"
+        }
+      ]
+    },
+    "top_providers_by_revenue": {
+      "obtained_via": "Drill-through opened by hovering the revenue column on the Q1-4 slice.",
+      "unit": "UAH billion",
+      "precision": "label",
+      "capture": "cap-2",
+      "period_attribution_note": "Tooltip anchors are not crisply resolvable in the screenshots. Attribution rests on anchor position plus a consistency check: the top-ten sum rises from 6.51bn to 7.27bn across the two lists, matching the published rise in market revenue from 22.6bn to 24.4bn. Confirm by re-hovering before any published use.",
+      "2024 Q1-4": [
+        {
+          "rank": 1,
+          "name": "Укртелеком",
+          "revenue_bn": 1.64
+        },
+        {
+          "rank": 2,
+          "name": "Київстар",
+          "revenue_bn": 1.56
+        },
+        {
+          "rank": 3,
+          "name": "ДАТАГРУП",
+          "revenue_bn": 0.77
+        },
+        {
+          "rank": 4,
+          "name": "ВОЛЯ-КАБЕЛЬ",
+          "revenue_bn": 0.69
+        },
+        {
+          "rank": 5,
+          "name": "Науковопромислова компа…",
+          "revenue_bn": 0.49,
+          "name_truncated": true
+        },
+        {
+          "rank": 6,
+          "name": "ФРІНЕТ",
+          "revenue_bn": 0.37
+        },
+        {
+          "rank": 7,
+          "name": "Бізнес і Технології",
+          "revenue_bn": 0.34
+        },
+        {
+          "rank": 8,
+          "name": "ФАРЛЕП-ІНВЕСТ",
+          "revenue_bn": 0.25
+        },
+        {
+          "rank": 9,
+          "name": "МЕРЕЖА ЛАНЕТ",
+          "revenue_bn": 0.23
+        },
+        {
+          "rank": 10,
+          "name": "НАУКОВО-ВИРОБНИЧЕ …",
+          "revenue_bn": 0.17,
+          "name_truncated": true
+        }
+      ],
+      "2025 Q1-4": [
+        {
+          "rank": 1,
+          "name": "Київстар",
+          "revenue_bn": 1.76
+        },
+        {
+          "rank": 2,
+          "name": "Укртелеком",
+          "revenue_bn": 1.66
+        },
+        {
+          "rank": 3,
+          "name": "ВОЛЯ-КАБЕЛЬ",
+          "revenue_bn": 0.77
+        },
+        {
+          "rank": 4,
+          "name": "Науковопромислова компа…",
+          "revenue_bn": 0.75,
+          "name_truncated": true
+        },
+        {
+          "rank": 5,
+          "name": "ДАТАГРУП",
+          "revenue_bn": 0.73
+        },
+        {
+          "rank": 6,
+          "name": "ФАРЛЕП-ІНВЕСТ",
+          "revenue_bn": 0.38
+        },
+        {
+          "rank": 7,
+          "name": "Бізнес і Технології",
+          "revenue_bn": 0.38
+        },
+        {
+          "rank": 8,
+          "name": "МЕРЕЖА ЛАНЕТ",
+          "revenue_bn": 0.3
+        },
+        {
+          "rank": 9,
+          "name": "ФРІНЕТ",
+          "revenue_bn": 0.28
+        },
+        {
+          "rank": 10,
+          "name": "НАУКОВО-ВИРОБНИЧЕ …",
+          "revenue_bn": 0.26
+        }
+      ],
+      "project_relevance": "A named anchor set of legal entities with market shares on one market, published by the regulator and comparable year on year. Candidate top-of-distribution anchor for the correspondence layer."
+    }
+  },
+  "derived": {
+    "method": "All values below computed from series above. None read off the dashboard.",
+    "respondents_Q1-4_2024_to_2025": {
+      "absolute": -1431,
+      "percent": -42.26,
+      "inputs": [
+        3386,
+        1955
+      ],
+      "superseded": {
+        "reading": 3286,
+        "percent": -40.51,
+        "reason": "Second digit misread from full-dashboard screenshots."
+      }
+    },
+    "lines_Q1-4_2024_to_2025": {
+      "absolute": 506376,
+      "percent": 6.18,
+      "inputs": [
+        8196432,
+        8702808
+      ],
+      "precision": "both inputs from tooltip"
+    },
+    "lines_Q1-2_2024_to_2025": {
+      "absolute": -27383,
+      "percent": -0.32,
+      "inputs": [
+        8496449,
+        8469066
+      ],
+      "note": "Both periods carry the label 8.5M. The direction of change is invisible at label precision."
+    },
+    "lines_Q1-2_2021_to_2025": {
+      "absolute": 492239,
+      "percent": 6.17,
+      "inputs": [
+        7976827,
+        8469066
+      ]
+    },
+    "extremes": {
+      "lines_maximum": {
+        "period": "2025 Q1-4",
+        "value": 8702808
+      },
+      "respondents_minimum": {
+        "period": "2025 Q1-4",
+        "value": 1955
+      },
+      "note": "Maximum of the line series and minimum of the respondent series fall in the same period. The maximum is robust to label rounding: 8702808 exceeds any value labelled 8.1M by at least 550000."
+    },
+    "anomaly_2024_annual_below_semiannual": {
+      "total_lines": {
+        "Q1-2": 8496449,
+        "Q1-4": 8196432,
+        "absolute": -300017,
+        "percent": -3.53
+      },
+      "rural_lines": {
+        "Q1-2": 2294948,
+        "Q1-4": 2266163,
+        "absolute": -28785,
+        "percent": -1.25
+      },
+      "comparison_other_years": "In 2021, 2022, 2023 and 2025 the annual figure exceeds the semiannual figure. 2024 is the only inversion in the series, and it appears in both the total and the rural sub-series.",
+      "status": "Present in the published data, not a rendering artifact. See derived.arpu_consistency_check."
+    },
+    "arpu_consistency_check": {
+      "hypothesis": "ARPU = total revenue / 12 / line count.",
+      "results": [
+        {
+          "period": "2024 Q1-4",
+          "computed": 229.7,
+          "published": 229.7,
+          "revenue": 22592613620,
+          "lines": 8196432
+        },
+        {
+          "period": "2025 Q1-4",
+          "computed": 233.2,
+          "published": 233.2,
+          "revenue": 24355466660,
+          "lines": 8702808
+        }
+      ],
+      "conclusion": "Exact agreement once revenue is taken from the table rather than the rounded label. Confirms 8196432 as the regulator's own 2024 annual line count."
+    },
+    "robustness_of_the_forty_percent_claim": {
+      "claim": "Respondent count fell by more than forty percent in one annual step.",
+      "status": "Base value 3386 confirmed by table export. No longer rests on an occluded label.",
+      "threshold": "Holds for any 2024 base above 3258.3 given the 2025 value of 1955.",
+      "corroboration": "Q1-2, Q1-3 and Q1-4 all give 42.2 to 42.4 percent; Q1 gives 40.2 percent."
+    },
+    "wholesale_revenue_against_respondent_count": {
+      "indicator": "Постачальникам мереж/послуг — revenue from supplying networks and services to other providers",
+      "meaning": "Monetary trace of the inter-provider dependency layer, reported by the selling side.",
+      "step_2024_to_2025": {
+        "Q1": 13.97,
+        "Q1-2": 8.7,
+        "Q1-3": 11.9,
+        "Q1-4": 7.88
+      },
+      "against": "Respondent count fell 40 to 42 percent over the same step on every slice.",
+      "reading": "The reporting population contracted while trade between providers grew on all four slices."
+    },
+    "slice_shape_check": {
+      "observation": "Within each year the respondent count rises from Q1 to Q1-3 and falls at Q1-4. The shape repeats in both years.",
+      "2024": {
+        "Q1": 3207,
+        "Q1-2": 3450,
+        "Q1-3": 3474,
+        "Q1-4": 3386
+      },
+      "2025": {
+        "Q1": 1917,
+        "Q1-2": 1995,
+        "Q1-3": 2002,
+        "Q1-4": 1955
+      },
+      "bearing": "A property of the slice, not of late filings still accumulating for the most recent period."
+    },
+    "fall_across_all_four_slices": {
+      "step": "2024 to 2025",
+      "note": "Four cumulative slices of the same series, all from table export.",
+      "Q1": {
+        "from": 3207,
+        "to": 1917,
+        "percent": -40.22
+      },
+      "Q1-2": {
+        "from": 3450,
+        "to": 1995,
+        "percent": -42.17
+      },
+      "Q1-3": {
+        "from": 3474,
+        "to": 2002,
+        "percent": -42.37
+      },
+      "Q1-4": {
+        "from": 3386,
+        "to": 1955,
+        "percent": -42.26
+      },
+      "spread": "2.15 percentage points; Q1 is the low end"
+    },
+    "level_persists_into_2026": {
+      "series": "Q1 respondents",
+      "values": {
+        "2024": 3207,
+        "2025": 1917,
+        "2026": 1883
+      },
+      "2025_to_2026_percent": -1.77,
+      "wholesale_Q1": {
+        "2025": 308223340,
+        "2026": 310963170,
+        "percent": 0.89
+      },
+      "bearing": "The post-fall level holds a year later on the same slice. Argues against reading the 2025 values as an incomplete collection."
+    },
+    "late_filing_tail_measured": {
+      "case": "2024 Q1-2 respondents",
+      "published_oct_2024": 3443,
+      "panel_2026_09_02": 3450,
+      "delta": 7,
+      "percent": 0.2,
+      "bearing": "The series is revised upward by late filings, and the magnitude is about two tenths of a percent over roughly 23 months. Too small to threaten a forty percent step.",
+      "secondary_effect": "Resolves the repository constant 3443 as a 2024 Q1-2 value captured at an earlier date, and supersedes it with 3450."
+    },
+    "ep_discrepancy_resolved": {
+      "claim": "Економічна правда, March 2025, citing НКЕК: 3383 fixed-internet providers at end of Q3 2024.",
+      "panel": "3474 respondents for 2024 Q1-3.",
+      "resolution": "Not a late-filing revision. The measured tail is about 7 entities per slice, not 91. ЕП reports a different metric or a different tab."
+    }
+  },
+  "recorded_elsewhere_not_verified_here": {
+    "provenance": "Values transcribed in icrp-rev13.md from earlier dashboard sessions. No screenshot of these panels exists in the present capture set. Treat as prior working notes until re-captured.",
+    "panel": "Покриття та проникнення",
+    "unit": "households (підзвітна кількість домогосподарств)",
+    "oblast_series": {
+      "Луганська": {
+        "2021 Q2": 122067,
+        "2022 Q2": 1354,
+        "from 2022 Q4": null,
+        "note": "Empty from 2022 Q4 onward."
+      },
+      "Донецька": {
+        "values_in_order": [
+          322265,
+          110429,
+          87090,
+          112993,
+          79378,
+          68732,
+          57641
+        ],
+        "period_labels": "not recorded in rev13"
+      },
+      "Херсонська": {
+        "values_in_order": [
+          255394,
+          1067,
+          66829,
+          68114,
+          65459,
+          61852,
+          55892
+        ],
+        "period_labels": "not recorded in rev13"
+      },
+      "Одеська": {
+        "2024 Q4": 553702,
+        "2025 Q2": 711907,
+        "percent_change": 28.6
+      },
+      "Чернівецька": {
+        "values_in_order": [
+          148368,
+          102235,
+          104421,
+          141080
+        ],
+        "period_labels": "not recorded in rev13"
+      }
+    },
+    "cross_panel_discrepancy_2022": {
+      "fixed_access_panel": "7.1M lines, 2022 Q1-2",
+      "coverage_panel": "6.9M households, 2022 Q2",
+      "note": "Endpoints 2021 and 2025 agree across the two panels at 8.0 and 8.5."
+    }
+  },
+  "open_items": [
+    {
+      "item": "Tab «Загальні показники ринків ЕК»",
+      "status": "not captured"
+    },
+    {
+      "item": "Ownership links among ДАТАГРУП, ВОЛЯ-КАБЕЛЬ and ФАРЛЕП-ІНВЕСТ",
+      "status": "working hypothesis, unverified",
+      "detail": "If a common controlling owner is confirmed, one owner holds three separately reporting legal entities inside the regulator's own top ten. Second identifier failure mode observable in a primary publication.",
+      "action": "Check against ЄДР. Not a dashboard task."
+    },
+    {
+      "item": "Repository constant 3443",
+      "status": "resolved",
+      "action": "Replace with 3450, labelled: Фікс. доступ до Інтернету, slice Q1-2, 2024, table export, captured 2026-09-02. Record 3443 as the value published in October 2024 and superseded."
+    },
+    {
+      "item": "Lines panel table export",
+      "status": "not captured",
+      "detail": "Line counts for 2021-2023 Q1-4 and all Q1 and Q1-3 periods remain at label precision or absent.",
+      "action": "Same show-as-table path on the right-hand panel."
+    }
+  ],
+  "regulatory_context": {
+    "reporting_liability_relief": {
+      "act": "Закон України 2115-IX від 03.03.2022",
+      "effect": "Removes liability for failure to file reporting during martial law.",
+      "bearing": "In force from March 2022. The respondent series rose above its 2021 level by 2024 while it was in force, so it does not by itself account for the 2025 fall."
+    },
+    "register_procedure_amendment": {
+      "act": "Постанова НКЕК від 14.05.2025 № 311",
+      "document_id": "z1002-25",
+      "amends": "Порядок ведення реєстру постачальників електронних комунікаційних мереж та послуг, постанова НКЕК від 20.04.2022 № 30, зареєстровано в Мін'юсті 07.05.2022 № 502/37838",
+      "registered": "Мін'юст, 30.06.2025",
+      "in_force": "2025-08-01",
+      "form_of_amendment": "Порядок restated in a new edition",
+      "obligation": "Providers active at entry into force to file notification of changed particulars within three months, to 2025-11-01",
+      "bearing": "Governs the register, not the reporting order. Both the 2024 annual filing and the 2025 semiannual filing predate entry into force, so it does not account for the fall visible by 2025 Q1-2."
+    },
+    "form_transition_that_did_not_occur": {
+      "new_form": "№ 1-Е «Сфера електронних комунікацій», постанова НКЕК від 14.06.2023 № 237, Мін'юст 09.08.2023 № 1349/40405",
+      "scheduled_introduction": "2025-04-01, per постанова НКЕК від 03.01.2024 № 3, Мін'юст 18.01.2024 № 95/41440",
+      "actual": "НКЕК opened the reporting period for 2025 annual results on form 1-T on 2026-01-01 and continued accepting 1-T for 2026 Q1.",
+      "bearing": "The whole 2021 to 2025 series is on one form. A form change does not account for the fall."
+    },
+    "unresolved": "No captured act changes the population obliged to file within the window between the 2024 and 2025 filings. This is an absence observation from an uncalibrated search of the regulator's act listing. Under the project's own source-calibration rule it is a working inference and not a data observation until a control query confirms the listing returns acts already known to exist."
+  },
+  "companion_files": {
+    "observations": "nkek-fixed-access-observations.csv — one row per observation, long format. Primary artifact.",
+    "this_file": "Provenance, derived values, regulatory context and open items. Not the data of record."
+  }
+}

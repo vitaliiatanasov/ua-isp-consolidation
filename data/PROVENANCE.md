@@ -11,6 +11,28 @@ in `out/` and `out2/` are snapshots of that state.
 | `out/ua_peeringdb.csv` | PeeringDB | `/api/net?org__country=UA` | 2026-08 |
 | `out2/prefix_outcomes.csv` | RIPEstat | `announced-prefixes`, `prefix-overview` | 2026-08 |
 | `out2/*_geo*.csv` | RIPEstat | prefix geolocation | 2026-08 |
+| `data/nkek-fixed-access-observations.csv` | NCEC dashboard, tab «Фікс. доступ до Інтернету» | show-as-table export | 2026-09-02 |
+| `data/nkek-fixed-access-dashboard.json` | as above | provenance, derived values, regulatory context | 2026-09-02 |
+
+## The NCEC reference figure
+
+`out/ua_summary.json` carries two capture dates. The routing figures are the
+August 2026 snapshot. The denominator, 3,386 entities filing form 1-T for fixed
+access in 2024, was read from the regulator's table export on 2 September 2026.
+Its source row, precision class and capture code are in the observations CSV.
+
+The figure counts respondents, meaning entities that filed for the stated
+cumulative period. It is not a count of registered providers. The register and
+the reporting population are different objects, and the gap between them is the
+subject of this work rather than an inconvenience in it.
+
+Up to commit 36c8d7b this repository used 3,443, which is the Q1-2 2024 slice as
+published in the press citing NCEC in October 2024. The same slice reads 3,450 on
+the panel in September 2026; the seven-entity difference is late filings, about
+two tenths of a percent over twenty-three months. Neither is wrong. Both are
+half-year values, and they sat under an annual label, so the annual slice
+replaced them. The summary was recomputed from the archived outputs rather than
+by refetching, so the routing snapshot is untouched.
 
 ## Analysis window
 
