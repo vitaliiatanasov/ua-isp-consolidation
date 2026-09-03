@@ -889,7 +889,7 @@
       "superseded": {
         "reading": 3286,
         "percent": -40.51,
-        "reason": "Second digit misread from full-dashboard screenshots."
+        "reason": "Superseded by the show-as-table export, which is exact."
       }
     },
     "lines_Q1-4_2024_to_2025": {
@@ -1052,62 +1052,6 @@
       "claim": "Економічна правда, March 2025, citing НКЕК: 3383 fixed-internet providers at end of Q3 2024.",
       "panel": "3474 respondents for 2024 Q1-3.",
       "resolution": "Not a late-filing revision. The measured tail is about 7 entities per slice, not 91. ЕП reports a different metric or a different tab."
-    }
-  },
-  "recorded_elsewhere_not_verified_here": {
-    "provenance": "Values transcribed in icrp-rev13.md from earlier dashboard sessions. No screenshot of these panels exists in the present capture set. Treat as prior working notes until re-captured.",
-    "panel": "Покриття та проникнення",
-    "unit": "households (підзвітна кількість домогосподарств)",
-    "oblast_series": {
-      "Луганська": {
-        "2021 Q2": 122067,
-        "2022 Q2": 1354,
-        "from 2022 Q4": null,
-        "note": "Empty from 2022 Q4 onward."
-      },
-      "Донецька": {
-        "values_in_order": [
-          322265,
-          110429,
-          87090,
-          112993,
-          79378,
-          68732,
-          57641
-        ],
-        "period_labels": "not recorded in rev13"
-      },
-      "Херсонська": {
-        "values_in_order": [
-          255394,
-          1067,
-          66829,
-          68114,
-          65459,
-          61852,
-          55892
-        ],
-        "period_labels": "not recorded in rev13"
-      },
-      "Одеська": {
-        "2024 Q4": 553702,
-        "2025 Q2": 711907,
-        "percent_change": 28.6
-      },
-      "Чернівецька": {
-        "values_in_order": [
-          148368,
-          102235,
-          104421,
-          141080
-        ],
-        "period_labels": "not recorded in rev13"
-      }
-    },
-    "cross_panel_discrepancy_2022": {
-      "fixed_access_panel": "7.1M lines, 2022 Q1-2",
-      "coverage_panel": "6.9M households, 2022 Q2",
-      "note": "Endpoints 2021 and 2025 agree across the two panels at 8.0 and 8.5."
     }
   },
   "open_items": [

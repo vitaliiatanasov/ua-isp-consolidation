@@ -2,17 +2,17 @@
 """
 verify_claims.py
 
-Independent check, added to make the proposal's figures auditable. It does
+Independent check, added to make the published figures auditable. It does
 not run the original analysis; it recomputes each cited number from the
 archived outputs of asn_visibility_ua.py and prefix_substitution_ua.py
-(out/ and out2/) and compares it against the value stated in the proposal.
+(out/ and out2/) and compares it against the value published in the README.
 
 Runs offline: no network access, no RIPEstat queries. Anyone can check the
-proposal against the data in one command.
+README against the data in one command.
 
     python3 scripts/verify_claims.py
 
-Each line prints the claim as it appears in the proposal, the value computed
+Each line prints the claim as it appears in the README, the value computed
 from the data, and PASS or FAIL.
 """
 
@@ -143,7 +143,7 @@ check("twelve Ukrainian ASes announced today by Russian operators",
 ru = pd.read_csv(ROOT / "out2/ru_occupation_acquirers.csv")
 named = ["novoros", "kolomna", "kuzbas"]
 found = {n: ru.new_origin_holder.str.lower().str.contains(n, na=False).any() for n in named}
-check("Novoros Telecom, Kolomna-Sviaz TV, KuzbasSvyazUgol named in the proposal",
+check("Novoros Telecom, Kolomna-Sviaz TV, KuzbasSvyazUgol appear among the occupation acquirers",
       ", ".join(f"{k}={'yes' if v else 'NO'}" for k, v in found.items()),
       all(found.values()))
 
@@ -154,13 +154,13 @@ ad = a["ABSORBED_market"] / (a["ABSORBED_market"] + a["DARK"])
 check("a substantial share of their prefixes is announced today by other holders",
       f"{px:.1%} of resolved prefixes, {ad:.1%} of resolved IPv4 addresses",
       px > 0.3,
-      "The two denominators differ; the proposal claims prefixes, not addresses. "
+      "The two denominators differ; the README claims prefixes, not addresses. "
       "Both are lower bounds pending the covering-announcement check.")
 
 # ---------------------------------------------------------------- report
 w = max(len(c) for c, *_ in results)
 print("=" * 100)
-print("PROPOSAL CLAIMS VERIFIED AGAINST ARCHIVED DATA")
+print("PUBLISHED FIGURES VERIFIED AGAINST ARCHIVED DATA")
 print("=" * 100)
 fails = 0
 for claim, computed, ok, note in results:

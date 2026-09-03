@@ -3,7 +3,7 @@
 geo_adjust_ua.py
 
 Separates appropriation of networks in occupied territory from market
-consolidation, and produces every adjusted output the proposal cites.
+consolidation, and produces every adjusted output the README cites.
 
 Reads two archived files and makes no network calls, so it reproduces its
 outputs exactly:

@@ -10,7 +10,7 @@ https://github.com/vitaliiatanasov/ua-isp-consolidation
 Measures the gap between MARKET visibility and ROUTING visibility in the
 Ukrainian fixed-line ISP market.
 
-Produces three numbers that a research proposal can cite:
+Produces three numbers:
 
   1. Registered vs routed ASNs for UA, monthly, 2021-01 .. present  (RIPEstat)
   2. How many of those ASNs are actually ACCESS PROVIDERS rather than

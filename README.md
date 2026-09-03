@@ -22,7 +22,7 @@ python3 scripts/verify_claims.py
 ```
 
 Runs offline against the archived outputs in `out/` and `out2/`. Prints every
-figure cited in the research proposal alongside the value computed from the data.
+published figure alongside the value computed from the data.
 No network access, no API keys.
 
 ## What the analysis found
@@ -86,7 +86,7 @@ data/PROVENANCE.md                  query dates, sources, why re-running gives d
 |---|---|
 | `ua_asns_monthly.csv` | Registered and routed UA autonomous systems, monthly 2021-01 to 2026-08. `dark` = allocated but not announced. 2024-08 is null (query failure). |
 | `ua_peeringdb.csv` | 288 UA-registered PeeringDB networks with `info_type` classification |
-| `ua_summary.json` | Headline visibility figures. **Cited in the proposal.** |
+| `ua_summary.json` | Headline visibility figures. **Cited in the table above.** |
 | `ua_asn_visibility.png` | Two-panel chart of the series |
 
 **`out2/` — what happened to departed ASes**
@@ -98,9 +98,9 @@ data/PROVENANCE.md                  query dates, sources, why re-running gives d
 | `absorbed_prefix_geo.csv` | Archived RIPEstat geolocation of all 163 absorbed prefixes, retrieved 2026-08. Input to the adjustment below. |
 | `acquirer_countries.csv` | Archived country attribution per acquiring AS, retrieved 2026-08. Input to the adjustment below. |
 | `prefix_outcomes_geo_adjusted.csv` | IPv4 only (416 rows), each prefix geolocated, RU-announced space split out in `outcome_adj`. Produced by `geo_adjust_ua.py`. |
-| `acquirers_ru_filtered.csv` | Market acquirers, 82 rows. Produced by `geo_adjust_ua.py`. **Cited in the proposal.** |
+| `acquirers_ru_filtered.csv` | Market acquirers, 82 rows. Produced by `geo_adjust_ua.py`. **Cited in the table above.** |
 | `ru_occupation_acquirers.csv` | The 17 Russian holders announcing appropriated UA space. Produced by `geo_adjust_ua.py`. |
-| `substitution_summary_ru_adjusted.json` | Occupation separated. Produced by `geo_adjust_ua.py`. **Cited in the proposal.** |
+| `substitution_summary_ru_adjusted.json` | Occupation separated. Produced by `geo_adjust_ua.py`. **Cited in the table above.** |
 | `acquirers.csv` | Raw acquirer ranking, 97 rows. **Superseded** — see below. |
 | `substitution_summary.json` | Raw script output. **Superseded** — see below. |
 | `prefix_substitution_raw_run.log` | Full console record of the substitution run. Its closing summary block prints the *pre-adjustment* figures (97 acquirers, 163 absorbed) — this is the raw run, kept for audit, not the reported result. |
@@ -111,7 +111,7 @@ Dependency order:
 prefix_outcomes.csv + absorbed_prefix_geo.csv  ->  geo_adjust_ua.py  ->  *_geo_adjusted, acquirers_*, *_ru_adjusted
 ```
 
-Every file cited in the proposal is either produced by a script above or marked
+Every file behind a published figure is either produced by a script above or marked
 in the table as an archived lookup with a retrieval date.
 
 ## Method, in three steps
@@ -124,8 +124,8 @@ in the table as an archived lookup with a retrieval date.
    content and enterprise networks. PeeringDB `info_type` classifies UA-registered
    networks; the access-provider share is applied to the routed count as an
    estimator. PeeringDB covers 288 of ~1,584 routed UA systems, so this is an
-   estimator, not a census, and the derived share is reported as an interval in
-   the proposal.
+   estimator, not a census, and the derived share is reported as an interval
+   above.
 
 3. **Substitution.** For each AS announcing at 2024-09-01 but not at 2026-08-01,
    recover the prefixes it announced at T0 and ask who announces them now. Three
@@ -139,7 +139,7 @@ in the table as an archived lookup with a retrieval date.
 181 "departed" ASes are still announcing at least one of their original prefixes
 from the same origin. They were never absent; the single-instant snapshot caught
 them mid-flap. That is a 13.3% false positive rate for the snapshot method, which
-is why the proposal commits to a multi-month window instead. Under the stricter
+is why a multi-month observation window is needed instead. Under the stricter
 definition — every prefix returned — the rate is 9.9%. The looser figure is
 reported because a partially-returned AS is equally a false exit. The denominator
 is the 181 departed ASes; prefixes were recovered for 179 of them, and against
@@ -188,9 +188,9 @@ separated (97 acquirers, 163 absorbed prefixes). `out2/acquirers.csv` is its
 acquirer ranking, and the closing summary block of `out2/prefix_substitution_raw_run.log` prints the
 same pre-adjustment numbers. All three are superseded by
 `out2/substitution_summary_ru_adjusted.json` and `out2/acquirers_ru_filtered.csv`
-(82 market acquirers, 129 absorbed prefixes), which are what the proposal cites.
+(82 market acquirers, 129 absorbed prefixes), which are what the table above cites.
 The raw outputs are kept so the adjustment can be audited rather than taken on
-trust — if you find 97 where the proposal says 82, you are reading the
+trust — if you find 97 where the table above says 82, you are reading the
 pre-adjustment file.
 
 ## Limitations
